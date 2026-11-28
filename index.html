@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101512">
+  <meta name="description" content="Butrelinux is a CentOS Stream 10 bootc desktop with KDE Plasma and a choice of kernel families.">
+  <title>Butrelinux — Your system. Your kernel. Your choice.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Butrelinux home"><span class="brand-mark">b</span><span>butrelinux</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation"><span></span><span></span></button>
+    <nav id="primary-nav" class="nav">
+      <a href="#features">Features</a><a href="#kernels">Kernels</a><a href="#install">Install</a><a href="#ecosystem">Ecosystem</a>
+      <a class="nav-github" href="https://github.com/butrelinux/butrelinux">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> CENTOS STREAM 10 · BOOTC · KDE PLASMA</p>
+        <h1>Your system.<br><span>Your kernel.</span><br>Your choice.</h1>
+        <p class="hero-lede">A bootc-based Linux desktop built on CentOS Stream 10, with KDE Plasma, multi-user Nix, and a choice of kernel families. Pick the image that fits the way you use your machine.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://github.com/butrelinux/butrelinux/releases">Get the ISO <span>↓</span></a>
+          <a class="button button-quiet" href="https://github.com/butrelinux/butrelinux">Explore the source ↗</a>
+        </div>
+        <p class="hero-note">Already running a compatible bootc system? <a href="#install">See the rebase option</a>.</p>
+      </div>
+      <div class="hero-art" aria-label="Abstract illustration of the Butrelinux system">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="system-card">
+          <div class="system-top"><span class="window-dots"><i></i><i></i><i></i></span><span class="mono">SYSTEM / 01</span><span class="status-dot"></span></div>
+          <div class="system-symbol">b<span>.</span></div><div class="system-name">butrelinux</div><div class="system-sub">A desktop with options.</div>
+          <div class="system-rule"></div>
+          <div class="system-meta"><span>BASE</span><strong>EL 10</strong></div>
+          <div class="system-meta"><span>DESKTOP</span><strong>KDE PLASMA</strong></div>
+          <div class="system-meta"><span>IMAGE</span><strong>BOOTC</strong></div>
+        </div>
+        <div class="float-tag tag-kernel"><span class="tag-icon">⌘</span><span><small>CHOOSE YOUR</small><strong>KERNEL</strong></span></div>
+        <div class="float-tag tag-immutable"><span class="tag-icon">◈</span><span><small>IMAGE-BASED</small><strong>UPDATES</strong></span></div>
+        <div class="hero-grid"></div>
+      </div>
+      <div class="hero-index mono"><span>01 / 04</span><span>SCROLL TO EXPLORE ↓</span></div>
+    </section>
+
+    <section class="ticker" aria-label="Project highlights"><div class="ticker-track"><span>BOOTC LINUX</span><b>✳</b><span>NIX</span><b>✳</b><span>KDE PLASMA</span><b>✳</b><span>KERNEL OPTIONS</span><b>✳</b><span>CENTOS STREAM 10</span><b>✳</b><span>BOOTC LINUX</span><b>✳</b><span>NIX</span><b>✳</b><span>KDE PLASMA</span><b>✳</b><span>KERNEL OPTIONS</span><b>✳</b><span>CENTOS STREAM 10</span></div></section>
+
+    <section id="features" class="section section-wrap">
+      <div class="section-heading"><div><p class="eyebrow">01 — THE IDEA</p><h2>A solid base.<br><span>Room to choose.</span></h2></div><p class="section-intro">Butrelinux brings an image-based operating system and a familiar desktop together, with multi-user Nix integration and choices over the kernel that powers your hardware.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-number">01</span><div class="feature-icon">▧</div><h3>Image-based by design</h3><p>Built as a bootc image on CentOS Stream 10. The operating system is delivered as an image rather than assembled as a traditional mutable install.</p></article>
+        <article class="feature-card"><span class="feature-number">02</span><div class="feature-icon">⌘</div><h3>Kernel choice</h3><p>Choose from the stock kernel, CachyOS LTO, ELRepo kernel-ml, or the Hyperscale SIG kernel—with NVIDIA variants where provided.</p></article>
+        <article class="feature-card"><span class="feature-number">03</span><div class="feature-icon">▦</div><h3>KDE Plasma desktop</h3><p>A desktop-focused system with KDE Plasma at its center, built on the CentOS Stream 10 ecosystem.</p></article>
+        <article class="feature-card"><span class="feature-number">04</span><div class="feature-icon">◇</div><h3>Signed images</h3><p>Container images are signed with Sigstore Cosign, so you can verify the image signature before switching to it.</p></article>
+      </div>
+    </section>
+
+    <section id="kernels" class="section section-dark">
+      <div class="section-wrap">
+        <div class="section-heading"><div><p class="eyebrow">02 — PICK YOUR KERNEL</p><h2>One desktop.<br><span>Seven images.</span></h2></div><p class="section-intro">Choose a kernel family and whether you need the NVIDIA-enabled build. The image reference and switch command update with your selection.</p></div>
+        <div class="kernel-layout">
+          <div class="kernel-picker">
+            <p class="picker-label">KERNEL FAMILY</p>
+            <div class="kernel-options" role="group" aria-label="Kernel family">
+              <button class="kernel-option is-selected" data-kernel="lts" aria-pressed="true"><span class="option-code">01</span><span><strong>Stock LTS</strong><small>CentOS Stream kernel · 6.12</small></span><span class="option-arrow">↗</span></button>
+              <button class="kernel-option" data-kernel="lto" aria-pressed="false"><span class="option-code">02</span><span><strong>CachyOS LTO</strong><small>Optimized LTO kernel</small></span><span class="option-arrow">↗</span></button>
+              <button class="kernel-option" data-kernel="ml" aria-pressed="false"><span class="option-code">03</span><span><strong>ELRepo kernel-ml</strong><small>Mainline kernel from ELRepo</small></span><span class="option-arrow">↗</span></button>
+              <button class="kernel-option" data-kernel="hyperscale" aria-pressed="false"><span class="option-code">04</span><span><strong>Hyperscale</strong><small>Hyperscale SIG kernel</small></span><span class="option-arrow">↗</span></button>
+            </div>
+            <div class="nvidia-row"><div><strong>NVIDIA support build</strong><small>Available for CachyOS LTO, ELRepo kernel-ml, and Hyperscale.</small></div><button id="nvidia-toggle" class="switch" type="button" role="switch" aria-checked="false" aria-label="Enable NVIDIA build" disabled><span></span></button></div>
+            <p id="nvidia-help" class="control-help" aria-live="polite">Select a kernel family with an NVIDIA variant to enable this option.</p>
+          </div>
+          <div class="image-result">
+            <p class="eyebrow">YOUR IMAGE</p><div class="result-name" id="variant-name">lts</div>
+            <p class="result-description" id="variant-description">Stock CentOS Stream 10 kernel (6.12). No additional kernel modules or NVIDIA support.</p>
+            <div class="result-divider"></div><p class="picker-label">CONTAINER IMAGE</p>
+            <div class="code-line"><code id="image-ref">ghcr.io/butrelinux/lts:latest</code><button class="copy-button" data-copy="image-ref">COPY</button></div>
+            <p class="picker-label command-label">REBASE COMMAND</p>
+            <div class="code-block"><code id="switch-command">sudo bootc switch --enforce-container-sigpolicy ghcr.io/butrelinux/lts:latest --apply</code><button class="copy-button" data-copy="switch-command">COPY</button></div>
+            <p class="result-footnote">For existing compatible EL10 bootc systems. Read the prerequisites before switching.</p>
+          </div>
+        </div>
+        <p class="kernel-caveat">Hardware support varies. For older nvidia GPUs using the nouveau driver, use the standard non-nvidia variant of your choice.  These images are built for x86_64-v3 architecture only.</p>
+      </div>
+    </section>
+
+    <section id="install" class="section section-wrap">
+      <div class="section-heading"><div><p class="eyebrow">03 — GET STARTED</p><h2>Choose your<br><span>starting point.</span></h2></div><p class="section-intro">The recommended route is to download an ISO and install from it. If you already run a compatible EL10 bootc system, you can rebase to a Butrelinux image.</p></div>
+      <div class="install-grid">
+        <article class="install-card install-primary"><div class="install-top"><span class="eyebrow">RECOMMENDED</span><span class="install-number">01</span></div><div class="install-icon">↓</div><h3>Install from ISO</h3><p>Download a bootable ISO from the project downloads and follow the installation flow for your chosen variant.</p><a class="text-link" href="https://github.com/butrelinux/butrelinux/releases">Download the latest ISO ↗</a></article>
+        <article class="install-card"><div class="install-top"><span class="eyebrow">EXISTING BOOTC USERS</span><span class="install-number">02</span></div><div class="install-icon">⌁</div><h3>Switch an existing system</h3><p>For compatible CentOS Stream-derived EL10 bootc systems, use the command for your selected image.</p><div class="code-block compact"><code>sudo bootc switch --enforce-container-sigpolicy ghcr.io/butrelinux/lts:latest --apply</code><button class="copy-button" data-copy="install-command">COPY</button></div><p class="warning-note"><strong>Important:</strong> Rebasing from Fedora is not recommended, as cross-rebasing can leave incompatible system states. CentOS Stream-derived distros such as HeliumOS or CentOS Bootc are supported. Back up important data and read the project instructions first.</p></article>
+      </div>
+      <div class="verify-strip"><div><p class="eyebrow">VERIFICATION</p><h3>Check the image signature.</h3><p>Butrelinux publishes a Cosign public key in the main repository.</p></div><div class="verify-command"><code>cosign verify --key cosign.pub ghcr.io/butrelinux/lts:latest</code><a href="https://github.com/butrelinux/butrelinux/blob/main/cosign.pub">View public key ↗</a></div></div>
+    </section>
+
+    <section id="ecosystem" class="section section-muted"><div class="section-wrap">
+      <div class="section-heading"><div><p class="eyebrow">04 — THE PROJECT</p><h2>More than<br><span>one repository.</span></h2></div><p class="section-intro">Butrelinux is a polyrepo project. Each repository has a focused role—from desktop images and reusable modules to testing and documentation.</p></div>
+      <div class="repo-grid">
+        <a class="repo-card repo-main" href="https://github.com/butrelinux/butrelinux"><span class="repo-type">CORE PROJECT</span><span class="repo-arrow">↗</span><h3>butrelinux</h3><p>The main OS image definitions, kernel variants, build configuration, and release workflow.</p><span class="repo-link">Explore source</span></a>
+        <a class="repo-card" href="https://github.com/butrelinux/modules"><span class="repo-type">REUSABLE COMPONENTS</span><span class="repo-arrow">↗</span><h3>modules</h3><p>A separate collection of BlueBuild modules used to compose image features.</p><span class="repo-link">Explore modules</span></a>
+        <a class="repo-card" href="https://github.com/butrelinux/local-test"><span class="repo-type">TESTING</span><span class="repo-arrow">↗</span><h3>local-test</h3><p>Tools for building and booting local QCOW2 images in a QEMU test environment.</p><span class="repo-link">Explore testing</span></a>
+        <a class="repo-card" href="https://github.com/butrelinux/lab"><span class="repo-type">EXPERIMENTAL</span><span class="repo-arrow">↗</span><h3>lab</h3><p>An experimental image and testing ground. Not part of the standard production variant lineup.</p><span class="repo-link">Explore lab</span></a>
+        <a class="repo-card" href="https://github.com/butrelinux/bluebuild-template"><span class="repo-type">STARTER TEMPLATE</span><span class="repo-arrow">↗</span><h3>bluebuild-template</h3><p>A reusable BlueBuild template for people creating their own image projects.</p><span class="repo-link">Explore template</span></a>
+        <a class="repo-card" href="https://github.com/butrelinux/docs"><span class="repo-type">REFERENCE</span><span class="repo-arrow">↗</span><h3>docs</h3><p>Architecture, kernels, development, operations, and repository-map notes.</p><span class="repo-link">Read documentation</span></a>
+      </div>
+      <p class="docs-disclaimer">Documentation note: the docs repository describes itself as AI-generated and an approximation of the codebase. Treat source code and current repository instructions as authoritative.</p>
+    </div></section>
+
+    <section class="closing section-wrap"><p class="eyebrow">BUILT IN THE OPEN</p><h2>Curious? Come<br><span>look under the hood.</span></h2><p>Read the source, explore the image definitions, or help improve the project.</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/butrelinux/butrelinux">View on GitHub ↗</a><a class="button button-quiet" href="https://github.com/butrelinux/docs">Read the docs ↗</a></div></section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="#"><span class="brand-mark">b</span><span>butrelinux</span></a><span class="footer-tagline">This site was AI generated on 2026-11-27.  Consider it a placeholder.</span><div class="footer-links"><a href="https://github.com/butrelinux">GitHub organization ↗</a><a href="https://github.com/butrelinux/butrelinux/releases">Downloads ↗</a></div><span class="copyright">© Butrelinux · Community project</span></footer>
+</body>
+</html>
